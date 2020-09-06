@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameJamSubmission", "GameJamSubmission.csproj", "{683D4291-81FC-445D-A55B-AB2BB905D752}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{683D4291-81FC-445D-A55B-AB2BB905D752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{683D4291-81FC-445D-A55B-AB2BB905D752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{683D4291-81FC-445D-A55B-AB2BB905D752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{683D4291-81FC-445D-A55B-AB2BB905D752}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AA1E12A-471F-4598-A0D7-8C3CFABDA7DE}
+	EndGlobalSection
+EndGlobal

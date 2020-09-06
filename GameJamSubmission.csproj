@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{683D4291-81FC-445D-A55B-AB2BB905D752}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GameJamSubmission</RootNamespace>
+    <AssemblyName>GameJamSubmission</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hero_right_LNl_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arena.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CollisionDetector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Projectile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hero.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Platform.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeftPlatform_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeftPlatform_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightPlatform_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightPlatform_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CenterPlatform_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CenterPlatform_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Projectile_1_b%3b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Projectile_1_w%3b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Projectile_2_b%3b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Projectile_2_w%3b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Projectile_1_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Projectile_1_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Projectile_2_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Projectile_2_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hero_down_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hero_down_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hero_jump_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hero_jump_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hero_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hero_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arena.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_right_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_right_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_right_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_right_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_right_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_left_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_left_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_left_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_left_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_left_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_left_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_left_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_left_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_left_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_right_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_right_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_right_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverSprites\GameOver_right_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonHowToPlay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonMainMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonRetry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonStartGame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonExit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hero_right_LNl_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
